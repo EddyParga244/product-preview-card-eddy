@@ -1,0 +1,251 @@
+/*FONTS*/
+@font-face {
+  font-family: Monserrat;
+  src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Fraunces;
+  src: url("fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*COLORS*/
+:root {
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+
+  --monserrat: "Monserrat", "sans-serif";
+  --fraunces: "Fraunces", "Arial";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Cream);
+}
+
+/*
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;
+  background-color: var(--White);
+}
+*/
+
+#container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 46%;
+  margin: 100px auto;
+  border-radius: 10px;
+  background-color: var(--White);
+}
+
+#perfume img {
+  display: block;
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  padding: 30px;
+}
+
+h1 {
+  font-family: var(--monserrat);
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--Grey);
+  padding-top: 10px;
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+p {
+  font-family: var(--monserrat);
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--Grey);
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-family: var(--fraunces);
+  font-size: 40px;
+  padding-right: 15px;
+  color: var(--Green-500);
+}
+
+h4 {
+  font-family: var(--monserrat);
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--Grey);
+  text-decoration: line-through;
+}
+
+button {
+  font-family: var(--monserrat);
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--White);
+  background-color: var(--Green-500);
+  border-style: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--Green-700);
+}
+
+@media (max-width: 424px) {
+  #container {
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr;
+    width: 100%;
+    align-items: normal;
+  }
+
+  #perfume img {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  #content {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 425px){
+  #container {
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr;
+    width: 100%;
+    align-items: normal;
+  }
+
+  #perfume img {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  #content {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 60px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  h3{
+    font-size: 60px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+    
+}
+
+@media (max-width: 769px) and (min-width: 601px) {
+  #container {
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr;
+    width: 80%;
+    align-items: normal;
+  }
+
+  #perfume img {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  #content {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 60px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  h3{
+    font-size: 60px;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1025px) and (min-width: 770px) {
+  #container{
+    width: 70%;
+  }
+}
